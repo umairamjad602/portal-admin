@@ -1,0 +1,21 @@
+:host {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100%;
+}
+
+.main-navigation {
+  flex-basis: 5rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.canvas {
+  flex-grow: 1;
+}

@@ -1,0 +1,22 @@
+.navbar {
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 0;
+}
+.logo {
+  width: 100px
+}
+.custom-link {
+  padding: 5px 25px;
+}
+.custom-link h4 {
+  font-weight: bold;
+}
+.second-header  {
+  padding-bottom: none;
+  padding: 5px 0;
+}
+.header-three .menu-area {
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+}

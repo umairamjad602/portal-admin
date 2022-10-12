@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-12">
+        <div *ngIf="ready || !loadRelatedMedia">
+            <div class="row mb-4">
+                <div class="col">
+                    <app-upload-media [module_id]="module_id" [module]="module" [relation_id]="relation_id"
+                        (mediaUploaded)="mediaHasBeenUploaded($event)">
+                    </app-upload-media>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <div *ngIf="loading">
+                        <p class="text-muted text-center">
+                            <app-loading></app-loading>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="my-5 d-flex flex-wrap" *ngIf="medias?.length > 0">
+                        <div class="card media-{{media.id}}" *ngFor="let media of medias">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <i class="fal fa-info-circle mr-2 text-info" *ngIf="media.is_default == 1" data-toggle="tooltip" title="Marked as default"></i>
+                                        <i class="fal fa-heart text-danger" *ngIf="media.media_type == 2" data-toggle="tooltip" title="Used as logo"></i>
+                                    </div>
+                                    <div class="btn-group mb-2">
+                                        <button type="button" class="btn btn-xs btn-outline-default btn-icon shadow-0"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fal fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="{{media.uri}}" target="_blank" class="dropdown-item"
+                                                style="text-decoration: none !important" *ngIf="options.previewMedia">
+                                                Preview
+                                            </a>
+
+                                            <a class="dropdown-item" (click)="markAsDefault(media)" *ngIf="options.setAsDefault">
+                                                Set as default
+                                            </a>
+
+                                            <a class="dropdown-item" (click)="setAsLogo(media, 2)"  *ngIf="options.setAsLogo">
+                                                Set as logo
+                                            </a>
+                                            <a class="dropdown-item" (click)="delete(media, $event)"  *ngIf="options.deleteMedia">
+                                                Delete
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thumbnail">
+                                    <div *ngIf="isImage(media)">
+                                        <img class="img-fluid" src="{{media.uri}}"
+                                            alt="{{media.media_title}}" />
+                                    </div>
+                                    <div *ngIf="!isImage(media)">
+                                        <img height="64" class="img-responsive"
+                                            src="./assets/theme/img/icons/file-icons/{{getFileIcon(media)}}">
+                                    </div>
+                                </div>
+                                <p class="card-text mt-3 text-center">
+                                    {{media.media_title}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-muted text-center" *ngIf="medias?.length == 0">
+                        No media found.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

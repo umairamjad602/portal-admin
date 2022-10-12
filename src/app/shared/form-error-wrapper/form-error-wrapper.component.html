@@ -1,0 +1,14 @@
+<div [ngClass]="{ 'has-error': hasError() }">
+  <ng-content></ng-content>
+  <ng-container *ngFor="let errorKey of errorKeys">
+    <span
+      class="help-block fw-bold text-danger"
+      *ngIf="control.hasError(errorKey) && control.touched"
+    >
+      {{ formateError(errorObject[errorKey], control.errors[errorKey]) }}
+    </span>
+  </ng-container>
+  <span class="help-block invalid-feedback" *ngIf="apiErrorMessage">
+    {{ apiErrorMessage }}
+  </span>
+</div>

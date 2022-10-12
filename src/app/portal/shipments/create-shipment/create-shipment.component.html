@@ -1,0 +1,366 @@
+<form class="col-12 py-2" [formGroup]="shipmentForm">
+  <div class="row">
+      <div class="col-sm-5 p-0">
+        <div class="custom-tag">
+          <h4>Shipper Details</h4>
+        </div>
+        <div class="form-grup form-check">
+          <input type="checkbox" id="is_business" class="form-check-input" formControlName="from_is_business">
+          <label for="is_business" class="form-check-label">Business Contact</label>
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" class="form-control form-control-sm" placeholder="First Name and Last Name" formControlName="from_name">
+        </div>
+        <div class="form-group">
+          <label for="commpany_name">Company</label>
+          <input type="text" id="commpany_name" class="form-control form-control-sm" formControlName="from_company_name">
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="commpany_name">Country</label>
+              <input type="text" id="commpany_name" class="form-control form-control-sm" value="PAKISTAN" formControlName="from_country" disable="true">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="postal_code">Postal Code</label>
+              <span class="from_postalcode_lookup">
+                <select  class="postalcode-lookup-dropdown form-control form-control-sm" id="from_postalcode_lookup" formControlName="from_postal_code">
+                </select>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="state">City</label>
+              <input type="text" id="City" class="form-control form-control-sm" formControlName="from_city">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="state">State</label>
+              <input type="text" id="State" class="form-control form-control-sm" formControlName="from_state">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea type="text" id="address" class="form-control form-control-sm" formControlName="from_address"> </textarea>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-control form-control-sm" formControlName="from_email">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-12">
+                <label for="state">Mobile</label>
+              </div>
+              <div class="col-3 pr-0">
+                <div class="form-group">
+                  <input type="text" id="postal_code" class="form-control form-control-sm" formControlName="from_mobile_code"  value="+92" disable="true">
+                </div>
+              </div>
+              <div class="col-9 pl-1">
+                <div class="form-group">
+                  <input type="text" id="City" class="form-control form-control-sm" formControlName="from_mobile">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-12">
+                <label for="">Tax ID</label>
+              </div>
+              <div class="col-3 pr-0">
+                <select name="" id="" class="form-control form-control-sm">
+                  <option value="CNIC">CNIC</option>
+                  <option value="NTN">NTN</option>
+                </select>
+              </div>
+              <div class="col-9 pl-1">
+                <div class="form-group">
+                  <input type="email" id="verification_number" class="form-control form-control-sm" formControlName="from_indentification_num">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+          </div>
+        </div>
+
+      </div>
+      <div class="col-2 p-0 d-flex justify-content-center">
+        <div class="divider"></div>
+      </div>
+      <div class="col-sm-5 p-0">
+        <div class="custom-tag">
+          <h4>Reciever Details</h4>
+        </div>
+        <div class="form-grup form-check">
+          <input type="checkbox" id="is_business" class="form-check-input" formControlName="to_is_business">
+          <label for="is_business" class="form-check-label">Business Contact</label>
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" class="form-control form-control-sm" placeholder="First Name and Last Name" formControlName="to_name">
+        </div>
+        <div class="form-group">
+          <label for="commpany_name">Company</label>
+          <input type="text" id="commpany_name" class="form-control form-control-sm" formControlName="to_company_name">
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="commpany_name">Country</label>
+              <select name="" id="to_country" class="cfm form-control form-control-sm select2" [appSelect2Struct]="select2Options" formControlName="to_country">
+                <option selected disabled>--Select Country --</option>
+                <option *ngFor="let item of countries" value="{{item.id}}">{{item.name}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="postal_code">Postal Code</label>
+              <span class="postalcode-lookup">
+                <select  class="postalcode-lookup-dropdown form-control form-control-sm" id="to_postalcode_lookup" formControlName="to_postal_code">
+                </select>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="state">City</label>
+              <input type="text" id="City" class="form-control form-control-sm" formControlName="to_city">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="state">State</label>
+              <input type="text" id="State" class="form-control form-control-sm" formControlName="to_state">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea type="text" id="address" class="form-control form-control-sm" formControlName="to_address"></textarea>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-control form-control-sm" formControlName="to_email">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-12">
+                <label for="state">Mobile</label>
+              </div>
+              <div class="col-3 pr-0">
+                <div class="form-group">
+                  <input type="text" id="postal_code" class="form-control form-control-sm" formControlName="to_mobile_code"  value="+92" disable="true">
+                </div>
+              </div>
+              <div class="col-9 pl-1">
+                <div class="form-group">
+                  <input type="text" id="City" class="form-control form-control-sm" formControlName="to_mobile">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-12">
+                <label for="">VAT ID</label>
+              </div>
+              <div class="col-12 ">
+                <div class="form-group">
+                  <input type="email" id="verification_number" class="form-control form-control-sm" formControlName="from_indentification_num">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="email">EORI No</label>
+              <input type="email" id="email" class="form-control form-control-sm" formControlName="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-12 mt-4">
+        <div class="custom-tag">
+          <h4>Shipment Details</h4>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="Radio-Button ">
+              <!-- <input class="form-check-input" type="radio" name="flexRadioDefault" id="6" value="6" formControlName="from_identification_type"> -->
+
+              <span>
+                Parcel
+              </span>
+              <span class="fa-solid fa-check"></span>
+            </div>
+
+          </div>
+          <div class="col-sm-6">
+            <div class="Radio-Button active">
+              <!-- <input class="form-check-input" type="radio" name="flexRadioDefault" id="7" value="7" formControlName="from_identification_type"> -->
+              <span>
+                Document
+              </span>
+              <span class="fa-solid fa-check"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="description">Summarize the contents of your shipment (in detail)</label>
+              <textarea id="description" rows="3" class="form-control form-control-sm" formControlName="description"></textarea>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <!-- <div class="border p-4 my-2">
+              <h4>What is the value of your Shipment?</h4>
+              <div class="form-group">
+                <label for="verification_number">Value</label>
+                <input type="text" id="verification_number" class="form-control form-control-sm w-25" formControlName="declared_value"> <label class="ml-3">USD</label>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="server">Service</label>
+            <select name="" id="" class="form-control form-control-sm">
+              <option value="">DHL</option>
+              <option value="">FED EX</option>
+              <option value="">SKY NET</option>
+            </select>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="weight">Weight</label>
+                  <input type="text" class="form-control form-control-sm">
+                </div>
+              </div>
+              <div class="col-6">
+                <!-- <div class="form-group">
+                  <label for="weight">Dimentions</label>
+                  <input type="text" class="form-control form-control-sm">
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-tag mt-3">
+          <h4>Parcel Itmes</h4>
+        </div>
+        <div class="col-sm-12 py-3">
+          <div class="d-flex" style="flex-wrap: none; overflow-x: auto;">
+            <div class="col-1 p-2">
+              <button class="btn btn-success btn-sm" style="background-color: #10c469;">+</button>
+            </div>
+            <div class="col-3">
+              <label for="">Description</label>
+              <input type="text" class="form-control form-control-sm" placeholder="Description">
+            </div>
+            <div class="col-2">
+              <label for="">Quantity</label>
+              <input type="number" class="form-control form-control-sm" placeholder="Quantity">
+            </div>
+            <div class="col-2">
+              <label for="">Unit Price</label>
+              <input type="number" class="form-control form-control-sm" placeholder="Unit Price">
+            </div>
+            <div class="col-2">
+              <label for="">Total Price</label>
+              <input type="number" class="form-control form-control-sm" placeholder="Total Price">
+            </div>
+            <div class="col-2">
+              <label for="">Good Origin</label>
+              <select name="" class="cfm form-control form-control-sm " placeholder="">
+                <option selected disabled>--Select Country --</option>
+                <option *ngFor="let item of countries" value="{{item.id}}">{{item.name}}</option>
+              </select>
+            </div>
+            <div class="col-2">
+              <label for="">HS Code</label>
+              <input type="text" class="form-control form-control-sm" placeholder="HS Code">
+            </div>
+            <div class="col-3">
+              <label for="">	E-commerce Product URL</label>
+              <input type="text" class="form-control form-control-sm" placeholder="E-commerce Product URL">
+            </div>
+          </div>
+        </div>
+
+        <div class="custom-tag mt-3">
+          <h4>Packging</h4>
+        </div>
+        <div class="col-sm-12 py-3">
+          <div class="d-flex" style="flex-wrap: none; overflow-x: auto;">
+            <div class="col-1 p-2">
+              <button class="btn btn-success btn-sm" style="background-color: #10c469;">+</button>
+            </div>
+            <div class="col-3">
+              <label for="">Name</label>
+              <input type="text" class="form-control form-control-sm" placeholder="Name">
+            </div>
+            <div class="col-2">
+              <label for="">Width</label>
+              <input type="number" class="form-control form-control-sm" placeholder="Width">
+            </div>
+            <div class="col-2">
+              <label for="">Height</label>
+              <input type="number" class="form-control form-control-sm" placeholder="Height">
+            </div>
+            <div class="col-2">
+              <label for="">Lenght</label>
+              <input type="number" class="form-control form-control-sm" placeholder="Lenght">
+            </div>
+            <div class="col-2">
+              <label for="">Weight</label>
+              <input type="text" class="form-control form-control-sm" placeholder="Weight">
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+  </div>
+  <div class="border-top my-5"></div>
+  <div class="d-flex-justify-content-between w-100">
+    <div>
+      <div class="form-grup form-check">
+        <input type="checkbox" id="is_business" class="form-check-input" formControlName="to_is_business">
+        <label for="is_business" class="form-check-label">I accept <a href="">Terms & Conditions</a></label>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-danger custom-btn">SUBMIT</button>
+    </div>
+  </div>
+  <!-- <button class="btn btn-primary">Create</button> -->
+</form>

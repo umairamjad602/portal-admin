@@ -1,0 +1,34 @@
+.login-header-wrapper {
+  margin-top: 5%;
+  .header-text {
+    font-family: 'Poppins-light';
+  }
+}
+
+.login-form-wrapper {
+  box-shadow: 0 0.8rem 1.6rem rgb(50 50 93 / 8%), 0 0.4rem 1.2rem rgb(0 0 0 / 7%);
+  padding: 5%;
+  margin-top: 5%;
+  border-radius: 2%;
+
+  .btn-login {
+    color: #fff !important;
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+}
+
+label, input {
+  font-family: 'Poppins-Regular';
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+.uneditable-input:focus {
+  border-color: var(--blue-color);
+  box-shadow: none;
+  outline: 0 none;
+}

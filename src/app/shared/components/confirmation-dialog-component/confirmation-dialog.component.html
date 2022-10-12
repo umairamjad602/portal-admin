@@ -1,0 +1,21 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="exampleModalLabel">{{ title }}</h4>
+  <button type="button" class="btn-close" (click)="dismiss()"></button>
+</div>
+
+<div class="w-100 warning mt-2">
+  <img src="/assets/images/warning.jpg" width="60" alt="" />
+</div>
+
+<div class="modal-body text-center">
+  {{ message }}
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-danger shadow-0 rounded-1" (click)="accept()">
+    {{ btn_ok_text }}
+  </button>
+  <button type="button" class="btn shadow-0 btn-light" (click)="decline()">
+    {{ btn_cancel_text }}
+  </button>
+</div>

@@ -1,0 +1,76 @@
+{
+  "name": "portal-client",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "stats": "webpack-bundle-analyzer dist/stats.json",
+    "start": "ng serve --configuration local --o --host 0.0.0.0 --proxy-config src/proxy.conf.json --port 4201",
+    "start:dev": "ng serve --configuration=development --o --host 0.0.0.0  --port 4201",
+    "start:prod": "ng serve --configuration=production --o --host 0.0.0.0  --port 4201",
+    "build:local": "ng build --configuration production --configuration=local --output-hashing=all --progress --output-path=dist",
+    "build:dev": "ng build --configuration development --output-hashing=all --progress --output-path=dist",
+    "build:prod": "ng build --configuration production --aot --output-hashing=all --progress --output-path=dist",
+    "pwa:build:local": "ng build --configuration=local && sw-precache --root=dist --config=precache-config.js",
+    "pwa:build:dev": "ng build --configuration production --configuration=development && sw-precache --root=dist --config=precache-config.js",
+    "pwa:build:prod": "ng build --configuration production && sw-precache --root=dist --config=precache-config.js",
+    "test": "ng test",
+    "e2e": "ng e2e",
+    "generate": "ng generate",
+    "compodoc:gen": "./node_modules/.bin/compodoc -p src/tsconfig.app.json",
+    "compodoc:serve": "./node_modules/.bin/compodoc -s src/tsconfig.app.json",
+    "compodoc": "npm run compodoc:gen && npm run compodoc:serve",
+    "lint": "tslint --fix --config tslint.json --project tsconfig.json",
+    "format:fix": "pretty-quick --staged"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "pretty-quick --staged",
+      "tslint --fix --config tslint.json --project tsconfig.json",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "bitbucket",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "Dan Ritchie <dan.ritchie@protonmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~13.3.0",
+    "@angular/common": "~13.3.0",
+    "@angular/compiler": "~13.3.0",
+    "@angular/core": "~13.3.0",
+    "@angular/forms": "~13.3.0",
+    "@angular/platform-browser": "~13.3.0",
+    "@angular/platform-browser-dynamic": "~13.3.0",
+    "@angular/router": "~13.3.0",
+    "@ng-bootstrap/ng-bootstrap": "^12.1.2",
+    "@popperjs/core": "^2.11.6",
+    "angularx-social-login": "^4.1.0",
+    "laravel-echo": "^1.14.0",
+    "pusher-js": "^7.4.0",
+    "rxjs": "^7.5.6",
+    "sweetalert2": "^11.4.33",
+    "tslib": "^2.3.0",
+    "zone.js": "^0.11.8"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~13.3.0",
+    "@angular/cli": "^13.3.9",
+    "@angular/compiler-cli": "~13.3.0",
+    "@types/jasmine": "~3.10.0",
+    "@types/node": "^12.11.1",
+    "jasmine-core": "~4.0.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.1.0",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "typescript": "~4.6.2"
+  }
+}

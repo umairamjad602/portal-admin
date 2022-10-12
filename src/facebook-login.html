@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SocialAuth</title>
+  <link rel="stylesheet" href="://bootswatch.com/darkly/bootstrap.min.css">
+  <style media="screen">
+    #fb-btn {
+      margin-top: 20px;
+    }
+
+    #profile,
+    #logout,
+    #feed {
+      display: none
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '1638653259852234',
+        cookie: true,
+        xfbml: true,
+        version: 'v2.8'
+      });
+
+      FB.login(function (response) {
+        console.log(response);
+        const userId = response.authResponse.userID;
+        FB.api(userId + "/accounts", function (response) {
+          if (response && !response.error) {
+            /* handle the result */
+            const pages = response.data;
+            const filteredPages = pages.filter((page) => page.id == "107622694522031");
+            const page = filteredPages[0];
+            console.log(page);
+            const pageAccessToken = page.access_token;
+            console.log(page.id + "/subscribed_apps");
+            FB.api(page.id + "/subscribed_apps",
+              'POST', {
+                "access_token": pageAccessToken,
+                "subscribed_fields": [
+                  "messages",
+                  "messaging_optouts",
+                  "messaging_payments",
+                  "messaging_account_linking",
+                  "messaging_game_plays",
+                  "standby",
+                  "messaging_policy_enforcement",
+                  "message_reactions",
+                  "inbox_labels",
+                  "messaging_feedback",
+                  "messaging_customer_information",
+                  "whatsapp_messages"
+                ]
+              },
+              function (response) {
+                console.log(response);
+              }
+            );
+
+          }
+        });
+      }, {
+        scope: 'user_birthday,user_location,email,pages_show_list,pages_messaging,pages_manage_metadata,pages_read_engagement,instagram_manage_messages,instagram_manage_insights,instagram_manage_comments,instagram_basic',
+        return_scopes: true
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <fb:login-button id="fb-btn" scope="public_profile,email,user_birthday,user_location,user_posts"
+    onlogin="checkLoginState();">
+  </fb:login-button>
+</body>
+
+</html>

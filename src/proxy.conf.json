@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "http://local.api.portal.codmi.xyz",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

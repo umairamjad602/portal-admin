@@ -1,0 +1,68 @@
+.divider {
+  width: 1px;
+  border: 1px solid #e25d34;
+  height: 100%;
+}
+.custom-tag {
+  background: #e25d34;
+	border-radius: 3px 0 0 3px;
+	color: white;
+	display: inline-block;
+	height: 26px;
+	line-height: 26px;
+	padding: 0 100px 0 5px;
+	position: relative;
+	margin: 0 10px 10px 0;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.custom-tag::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 15px solid #e25d34;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.custom-tag h4 {
+  color: white;
+  font-weight: bold;
+}
+
+label {
+  color: #000;
+  margin: 0;
+}
+
+.Radio-Button {
+  width: 100%;
+  padding: 4px 20px;
+  border: 1px solid #e25d34;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Radio-Button span:nth-child(2) {
+  display: none;
+}
+.Radio-Button:hover {
+  background: #e25d34;
+  color: white;
+}
+.Radio-Button.active {
+  background: #0b176f;
+  color: white;
+}
+.Radio-Button.active span:nth-child(2) {
+  display: block;
+}
+
+.custom-btn {
+  background: #e25d34;
+
+}

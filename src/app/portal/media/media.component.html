@@ -1,0 +1,39 @@
+<form action="/upload" class="dropzone needsclick" id="{{dropzone_id}}" [attr.data-dz-size]="50">
+    <div class="dz-message needsclick">
+        <i class="fal fa-cloud-upload text-muted mb-3"></i> <br>
+        <span class="text-uppercase">Drop files here or click to upload.</span>
+    </div>
+</form>
+
+<div class="row" *ngIf="shouldShowColumnRelationshipDesigner">
+    <div class="col">
+        <div class="table-responsive my-4">
+            <div class="alert bg-success-400 text-white">
+                <strong>Your file has been uploaded, but you have one more step to finalize the import</strong>.<br/>
+                Below you can see sample records from the file you upload, please choose the appropriate column relationship and click 'Start Import'.
+            </div>
+            <table class="table table-sm  table-bordered">
+                <thead>
+                    <tr>
+                        <th width="50" *ngFor="let item of [].constructor(records[0].length); let i = index">
+                            <select class="form-control" (change)="setColumnOrder(i, $event)">
+                                <option value=""></option>
+                                <option value="{{column}}" *ngFor="let column of columns">{{column}}</option>
+                            </select>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let record of records;">
+                        <td *ngFor="let item of [].constructor(record.length); let i = index">
+                            {{record[i]}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="float-lg-right mt20">
+            <button class="btn btn-success btn-lg shadow-0 rounded-0" (click)="processImport()"> Start Import</button>
+        </div>
+    </div>
+</div>
