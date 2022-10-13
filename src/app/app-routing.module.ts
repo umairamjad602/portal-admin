@@ -6,7 +6,8 @@ import { FullViewComponent } from './shared/components/full-view/full-view.compo
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'login'
+    pathMatch: 'full',
+    redirectTo: 'login'
   },
   {
     path: 'login',

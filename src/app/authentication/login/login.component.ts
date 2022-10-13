@@ -61,7 +61,7 @@ export class LoginComponent extends AbstractBaseComponent implements OnInit {
 
   private onLoggedIn(credentials: Credentials) {
     this.profileService.getProfileAsync().then(() => {
-      this.router.navigate(['/app/inbox'], { replaceUrl: true });
+      this.router.navigate(['/portal'], { replaceUrl: true });
     });
   }
 

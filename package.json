@@ -1,5 +1,5 @@
 {
-  "name": "portal-client",
+  "name": "portal-admin",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -34,7 +34,7 @@
     "url": ""
   },
   "keywords": [],
-  "author": "Dan Ritchie <dan.ritchie@protonmail.com>",
+  "author": "UMAIR AMJAD <umairamjad602@hotmail.com>",
   "license": "ISC",
   "bugs": {
     "url": ""
