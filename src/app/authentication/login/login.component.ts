@@ -27,12 +27,14 @@ export class LoginComponent extends AbstractBaseComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loadingStart()
     this.createForm();
     this.createResetPasswordForm();
     const params = this.router.parseUrl(this.router.url).queryParams;
     if (!!params.signup && params.signup === 'done') {
       this.accountSignupEmailSent = true;
     }
+    this.loadingFinished()
     this.ready = true;
   }
 
