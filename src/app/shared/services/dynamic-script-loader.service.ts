@@ -18,6 +18,8 @@ export const ScriptStore: Scripts[] = [
   { name: "moment", src: "assets/theme/js/dependency/moment/moment.js"},
   { name: 'datepicker', src: 'assets/theme/js/formplugins/bootstrap-datepicker/bootstrap-datepicker.js' },
   { name: 'daterangepicker', src: 'assets/theme/js/formplugins/bootstrap-daterangepicker/bootstrap-daterangepicker.js' },
+  { name: 'scrollbar', src: "assets/css/vendors/scrollbar.css"},
+  { name: 'scrollable', src: "assets/css/vendors/scrollable.css"}
 ];
 
 declare var document: any;
