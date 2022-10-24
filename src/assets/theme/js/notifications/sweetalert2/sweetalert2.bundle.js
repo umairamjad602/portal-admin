@@ -857,7 +857,7 @@
   };
   var toggle = function toggle(elem, condition, display) {
     condition ? show(elem, display) : hide(elem);
-  }; // borrowed from jquery $(elem).is(':visible') implementation
+  }; // borrowed from $$(elem).is(':visible') implementation
 
   var isVisible = function isVisible(elem) {
     return !!(
@@ -1161,7 +1161,7 @@
   var parseHtmlToContainer = function parseHtmlToContainer(param, target) {
     // DOM element
     if (param instanceof HTMLElement) {
-      target.appendChild(param); // JQuery element(s)
+      target.appendChild(param); // $element(s)
     } else if (_typeof(param) === 'object') {
       handleJqueryElem(target, param); // Plain string
     } else if (param) {

@@ -1,5 +1,5 @@
 /*!
- * Nestable jQuery Plugin - Copyright (c) 2012 David Bushell - http://dbushell.com/
+ * Nestable $Plugin - Copyright (c) 2012 David Bushell - http://dbushell.com/
  * Dual-licensed under the BSD or MIT licenses
  */
 (function($, window, document, undefined) {
@@ -484,4 +484,4 @@
 
     return retval || lists;
   };
-})(window.jQuery || window.Zepto, window, document);
+})(window.$|| window.Zepto, window, document);

@@ -4061,7 +4061,7 @@
 });
 
 /*!
- * jQuery Cropper v1.0.0
+ * $Cropper v1.0.0
  * https://github.com/fengyuanchen/jquery-cropper
  *
  * Copyright (c) 2018 Chen Fengyuan

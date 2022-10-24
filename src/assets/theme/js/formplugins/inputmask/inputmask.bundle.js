@@ -95,7 +95,7 @@
     var _inputmask2 = _interopRequireDefault(_inputmask);
     var _inputmask3 = __webpack_require__(3);
     var _inputmask4 = _interopRequireDefault(_inputmask3);
-    var _jquery = __webpack_require__(4);
+    var _$= __webpack_require__(4);
     var _jquery2 = _interopRequireDefault(_jquery);
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule

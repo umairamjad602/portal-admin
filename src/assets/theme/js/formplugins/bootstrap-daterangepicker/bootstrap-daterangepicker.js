@@ -18,9 +18,9 @@
   } else if (typeof module === 'object' && module.exports) {
     // Node / Browserify
     //isomorphic issue
-    var jQuery = typeof window != 'undefined' ? window.jQuery : undefined;
+    var $= typeof window != 'undefined' ? window.$: undefined;
     if (!jQuery) {
-      jQuery = require('jquery');
+      $= require('jquery');
       if (!jQuery.fn) jQuery.fn = {};
     }
     var moment =

@@ -1,5 +1,5 @@
 /*!
- * JQVMap: jQuery Vector Map Library
+ * JQVMap: $Vector Map Library
  * @author JQVMap <me@peterschmalfeldt.com>
  * @version 1.5.0
  * @link http://jqvmap.com

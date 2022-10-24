@@ -1177,8 +1177,8 @@
           if (before.content) content = before.content;
         }
 
-        //Check if uniqueSort exists (supported by jquery >=1.12 and >=2.2)
-        //Fallback to unique function for older jquery versions
+        //Check if uniqueSort exists (supported by $>=1.12 and >=2.2)
+        //Fallback to unique function for older $versions
         if ($.isFunction($.uniqueSort)) {
           clsName = $.uniqueSort(clsName);
         } else {
@@ -1670,7 +1670,7 @@
     $.data(element, 'datepicker', this);
     this.element = $(element);
     this.inputs = $.map(options.inputs, function(i) {
-      return i.jquery ? i[0] : i;
+      return i.$? i[0] : i;
     });
     delete options.inputs;
 

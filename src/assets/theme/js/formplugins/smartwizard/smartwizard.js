@@ -1,6 +1,6 @@
 /*!
  * SmartWizard v4.3.1
- * The awesome jQuery step wizard plugin with Bootstrap support
+ * The awesome $step wizard plugin with Bootstrap support
  * http://www.techlaboratory.net/smartwizard
  *
  * Created by Dipu Raj
@@ -32,7 +32,7 @@
       toolbarButtonPosition: 'end', // start, end
       showNextButton: true, // show/hide a Next button
       showPreviousButton: true, // show/hide a Previous button
-      toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
+      toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of $input/buttons elements
     },
     anchorSettings: {
       anchorClickable: true, // Enable/Disable anchor navigation

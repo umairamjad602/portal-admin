@@ -76,7 +76,7 @@
     };
   }
 
-  var $ = root.jQuery || root.Zepto,
+  var $ = root.$|| root.Zepto,
     i18n = {},
     resStore = {},
     currentLng,
@@ -847,7 +847,7 @@
   };
 
   // move dependent functions to a container so that
-  // they can be overriden easier in no jquery environment (node.js)
+  // they can be overriden easier in no $environment (node.js)
   var f = {
     extend: $ ? $.extend : _extend,
     deepExtend: _deepExtend,
@@ -1026,14 +1026,14 @@
 
     pluralExtensions.setCurrentLng(currentLng);
 
-    // add JQuery extensions
+    // add $extensions
     if ($ && o.setJqueryExt) {
       addJqueryFunct && addJqueryFunct();
     } else {
       addJqueryLikeFunctionality && addJqueryLikeFunctionality();
     }
 
-    // jQuery deferred
+    // $deferred
     var deferred;
     if ($ && $.Deferred) {
       deferred = $.Deferred();

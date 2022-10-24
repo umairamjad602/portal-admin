@@ -106,7 +106,7 @@ var myapp_config = {
 };
 
  /*!
- * jQuery app.navigation v1.0.0
+ * $app.navigation v1.0.0
  *
  * Copyright 2019, 2020 SmartAdmin WebApp
  * Released under Marketplace License (see your license details for usage)
@@ -308,7 +308,7 @@ var myapp_config = {
 
 })(jQuery, window, document);
  /*!
- * jQuery menuSlider v1.0.0
+ * $menuSlider v1.0.0
  *
  * Copyright 2019, 2020 SmartAdmin WebApp
  * Released under Marketplace License (see your license details for usage)
@@ -490,7 +490,7 @@ var myapp_config = {
 
 })(jQuery);
  /*!
- * jQuery SmartAdmin v4.0.0
+ * $SmartAdmin v4.0.0
  *
  * Copyright 2019, 2020 SmartAdmin WebApp
  * Released under Marketplace License (see your license details for usage)

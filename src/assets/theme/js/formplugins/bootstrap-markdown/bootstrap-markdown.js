@@ -1810,7 +1810,7 @@
     //Backbone.js
     factory(require('jquery'));
   } else {
-    //Jquery plugin
+    //$plugin
     factory(jQuery);
   }
 })(function($) {

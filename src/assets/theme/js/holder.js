@@ -393,7 +393,7 @@ License:  MIT
              * @param el A selector or a reference to a DOM node
              */
             addImage: function(src, el) {
-              //todo: use jquery fallback if available for all QSA references
+              //todo: use $fallback if available for all QSA references
               var nodes = DOM.getNodeArray(el);
               nodes.forEach(function(node) {
                 var img = DOM.newEl('img');

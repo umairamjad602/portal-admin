@@ -4017,7 +4017,7 @@ Dropzone.isValidFile = function(file, acceptedFiles) {
 };
 
 // Augment jQuery
-if (typeof jQuery !== 'undefined' && jQuery !== null) {
+if (typeof $!== 'undefined' && $!== null) {
   jQuery.fn.dropzone = function(options) {
     return this.each(function() {
       return new Dropzone(this, options);

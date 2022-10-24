@@ -11,15 +11,15 @@
   } else if (typeof module === 'object' && module.exports) {
     // Node/CommonJS
     module.exports = function(root, jQuery) {
-      if (jQuery === undefined) {
+      if ($=== undefined) {
         // require('jQuery') returns a factory that requires window to
-        // build a jQuery instance, we normalize how we use modules
+        // build a $instance, we normalize how we use modules
         // that require this pattern but the window provided is a noop
-        // if it's defined (how jquery works)
+        // if it's defined (how $works)
         if (typeof window !== 'undefined') {
-          jQuery = require('jquery');
+          $= require('jquery');
         } else {
-          jQuery = require('jquery')(root);
+          $= require('jquery')(root);
         }
       }
       factory(jQuery);
@@ -314,7 +314,7 @@
 
   /**
    * The callback for the event 'mouseenter'. It assumes that the event currentTarget is an entry.
-   * It shows the caption using jQuery (or using CSS if it is configured so)
+   * It shows the caption using $(or using CSS if it is configured so)
    *
    * @param {Event} eventObject the event object
    */
@@ -336,7 +336,7 @@
 
   /**
    * The callback for the event 'mouseleave'. It assumes that the event currentTarget is an entry.
-   * It hides the caption using jQuery (or using CSS if it is configured so)
+   * It hides the caption using $(or using CSS if it is configured so)
    *
    * @param {Event} eventObject the event object
    */
@@ -1387,9 +1387,9 @@
   };
 });
 /*!
- * jQuery Mousewheel 3.1.13
+ * $Mousewheel 3.1.13
  *
- * Copyright jQuery Foundation and other contributors
+ * Copyright $Foundation and other contributors
  * Released under the MIT license
  * http://jquery.org/license
  */
@@ -1639,7 +1639,7 @@
     // Ex : 'ease'
     cssEasing: 'ease',
 
-    //'for jquery animation'
+    //'for $animation'
     easing: 'linear',
     speed: 600,
     height: '100%',
@@ -1705,7 +1705,7 @@
     // Current lightGallery element
     this.el = element;
 
-    // Current jquery element
+    // Current $element
     this.$el = $(element);
 
     // lightGallery settings
@@ -2159,7 +2159,7 @@
     if (!subHtmlUrl) {
       if (typeof subHtml !== 'undefined' && subHtml !== null) {
         // get first letter of subhtml
-        // if first letter starts with . or # get the html form the jQuery object
+        // if first letter starts with . or # get the html form the $object
         var fL = subHtml.substring(0, 1);
         if (fL === '.' || fL === '#') {
           if (this.s.subHtmlSelectorRelative && !this.s.dynamic) {
@@ -2741,7 +2741,7 @@
   };
 
   Plugin.prototype.setTranslate = function($el, xValue, yValue) {
-    // jQuery supports Automatic CSS prefixing since jQuery 1.8.0
+    // $supports Automatic CSS prefixing since $1.8.0
     if (this.s.useLeft) {
       $el.css('left', xValue);
     } else {
@@ -3005,7 +3005,7 @@
 
     if (d) {
       if (!_this.s.dynamic) {
-        // only when not using dynamic mode is $items a jquery collection
+        // only when not using dynamic mode is $items a $collection
         this.$items.off('click.lg click.lgcustom');
       }
 
@@ -3920,7 +3920,7 @@
     };
 
     Thumbnail.prototype.setTranslate = function(value) {
-      // jQuery supports Automatic CSS prefixing since jQuery 1.8.0
+      // $supports Automatic CSS prefixing since $1.8.0
       this.core.$outer.find('.lg-thumb').css({
         transform: 'translate3d(-' + value + 'px, 0px, 0px)'
       });

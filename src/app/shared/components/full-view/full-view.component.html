@@ -1,40 +1,121 @@
-<!-- Loader starts-->
-<!-- Loader ends-->
-<!-- tap on top starts-->
-<div class="tap-top"><i data-feather="chevrons-up"></i></div>
-<!-- tap on tap ends-->
-<!-- page-wrapper Start-->
-<div class="page-wrapper compact-wrapper" id="pageWrapper">
-  <!-- Page Header Start-->
-  <app-header></app-header>
-  <!-- Page Header Ends                              -->
-  <!-- Page Body Start-->
-  <div class="page-body-wrapper">
-    <!-- Page Sidebar Start-->
-    <app-navigation></app-navigation>
-    <!-- Page Sidebar Ends-->
-    <!-- <div class="page-body"> -->
-      <div class="container-fluid">
-        <!-- <div class="page-title"> -->
-          <div class="row">
-            <div class="col-12 d-flex justify-content-center align-items-center" style="height: 80vh;">
-              <h1 class="text-center">
-                Dashbaord Comming Soon
-              </h1>
-            </div>
-          </div>
-        <!-- </div> -->
-      </div>
-      <!-- Container-fluid Ends-->
-    <!-- </div> -->
-    <!-- footer start-->
-    <app-footer></app-footer>
-  </div>
-</div>
-<!-- <app-footer></app-footer>
+<div class="page">
+  <div class="page-main">
 
-<div class="col-2">
-  <app-navigation></app-navigation>
+      <!-- app-Header -->
+      <app-header></app-header>
+      <!-- /app-Header -->
+
+      <!--APP-SIDEBAR-->
+      <app-navigation></app-navigation>
+
+      <!--app-content open-->
+      <div class="main-content app-content mt-0">
+          <div class="side-app">
+
+              <!-- CONTAINER -->
+              <div class="main-container container-fluid">
+
+                  <!-- PAGE-HEADER -->
+                  <div class="page-header">
+                      <h1 class="page-title">Dashboard 01</h1>
+                      <div>
+                          <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Dashboard 01</li>
+                          </ol>
+                      </div>
+                  </div>
+              </div>
+              <!-- CONTAINER END -->
+          </div>
+      </div>
+      <!--app-content close-->
+
+  </div>
+
+  <!-- Country-selector modal-->
+  <div class="modal fade" id="country-selector">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content country-select-modal">
+              <div class="modal-header">
+                  <h6 class="modal-title">Choose Country</h6><button aria-label="Close" class="btn-close"
+                      data-bs-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+              </div>
+              <div class="modal-body">
+                  <ul class="row p-3">
+                      <li class="col-lg-6 mb-2">
+                          <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block active">
+                              <span class="country-selector"><img alt="" src="./../assets/images/flags/us_flag.jpg"
+                                      class="me-3 language"></span>USA
+                          </a>
+                      </li>
+                      <li class="col-lg-6 mb-2">
+                          <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
+                              <span class="country-selector"><img alt=""
+                                  src="./../assets/images/flags/italy_flag.jpg"
+                                  class="me-3 language"></span>Italy
+                          </a>
+                      </li>
+                      <li class="col-lg-6 mb-2">
+                          <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
+                              <span class="country-selector"><img alt=""
+                                  src="./../assets/images/flags/spain_flag.jpg"
+                                  class="me-3 language"></span>Spain
+                          </a>
+                      </li>
+                      <li class="col-lg-6 mb-2">
+                          <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
+                              <span class="country-selector"><img alt=""
+                                  src="./../assets/images/flags/india_flag.jpg"
+                                  class="me-3 language"></span>India
+                          </a>
+                      </li>
+                      <li class="col-lg-6 mb-2">
+                          <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
+                              <span class="country-selector"><img alt=""
+                                  src="./../assets/images/flags/french_flag.jpg"
+                                  class="me-3 language"></span>French
+                          </a>
+                      </li>
+                      <li class="col-lg-6 mb-2">
+                          <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
+                              <span class="country-selector"><img alt=""
+                                  src="./../assets/images/flags/russia_flag.jpg"
+                                  class="me-3 language"></span>Russia
+                          </a>
+                      </li>
+                      <li class="col-lg-6 mb-2">
+                          <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
+                              <span class="country-selector"><img alt=""
+                                  src="./../assets/images/flags/germany_flag.jpg"
+                                  class="me-3 language"></span>Germany
+                          </a>
+                      </li>
+                      <li class="col-lg-6 mb-2">
+                          <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
+                              <span class="country-selector"><img alt=""
+                                  src="./../assets/images/flags/argentina.jpg"
+                                  class="me-3 language"></span>Argentina
+                          </a>
+                      </li>
+                      <li class="col-lg-6 mb-2">
+                          <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
+                              <span class="country-selector"><img alt="" src="./../assets/images/flags/malaysia.jpg"
+                                  class="me-3 language"></span>Malaysia
+                          </a>
+                      </li>
+                      <li class="col-lg-6 mb-2">
+                          <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
+                              <span class="country-selector"><img alt="" src="./../assets/images/flags/turkey.jpg"
+                                  class="me-3 language"></span>Turkey
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Country-selector modal-->
+  <app-footer></app-footer>
+
 </div>
-<div class="col-10">
-  <router-outlet></router-outlet> -->

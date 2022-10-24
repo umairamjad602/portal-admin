@@ -12,15 +12,15 @@
   } else if (typeof module === 'object' && module.exports) {
     // Node/CommonJS
     module.exports = function(root, jQuery) {
-      if (jQuery === undefined) {
+      if ($=== undefined) {
         // require('jQuery') returns a factory that requires window to
-        // build a jQuery instance, we normalize how we use modules
+        // build a $instance, we normalize how we use modules
         // that require this pattern but the window provided is a noop
-        // if it's defined (how jquery works)
+        // if it's defined (how $works)
         if (typeof window !== 'undefined') {
-          jQuery = require('jquery');
+          $= require('jquery');
         } else {
-          jQuery = require('jquery')(root);
+          $= require('jquery')(root);
         }
       }
       factory(jQuery);
@@ -37,7 +37,7 @@
   var S2 = (function() {
     // Restore the Select2 AMD loader so it can be used
     // Needed mostly in the language files, where the loader is not inserted
-    if (jQuery && jQuery.fn && jQuery.fn.select2 && jQuery.fn.select2.amd) {
+    if ($&& jQuery.fn && jQuery.fn.select2 && jQuery.fn.select2.amd) {
       var S2 = jQuery.fn.select2.amd;
     }
     var S2;
@@ -49,7 +49,7 @@
           require = S2;
         }
         /**
-         * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
+         * @license almond 0.3.3 Copyright $Foundation and other contributors.
          * Released under MIT license, http://github.com/requirejs/almond/LICENSE
          */
         //Going sloppy to avoid 'use strict' string cost, but strict practices should
@@ -535,12 +535,12 @@
 
     /* global jQuery:false, $:false */
     S2.define('jquery', [], function() {
-      var _$ = jQuery || $;
+      var _$ = $|| $;
 
       if (_$ == null && console && console.error) {
         console.error(
-          'Select2: An instance of jQuery or a jQuery-compatible library was not ' +
-            'found. Make sure that you are including jQuery before Select2 on your ' +
+          'Select2: An instance of $or a jQuery-compatible library was not ' +
+            'found. Make sure that you are including $before Select2 on your ' +
             'web page.'
         );
       }
@@ -809,10 +809,10 @@
         });
       };
 
-      // Append an array of jQuery nodes to a given element.
+      // Append an array of $nodes to a given element.
       Utils.appendMany = function($element, $nodes) {
-        // jQuery 1.7.x does not support $.fn.append() with an array
-        // Fall back to a jQuery object collection using $.fn.add()
+        // $1.7.x does not support $.fn.append() with an array
+        // Fall back to a $object collection using $.fn.add()
         if ($.fn.jquery.substr(0, 3) === '1.7') {
           var $jqNodes = $();
 
@@ -2315,7 +2315,7 @@
           // The parameters should always be an object
           params = params || {};
 
-          // Generate the jQuery event for the Select2 event
+          // Generate the $event for the Select2 event
           var evt = $.Event('select2:' + name, {
             params: params
           });
@@ -5460,7 +5460,7 @@
               var dataName = attributeName.substring(prefix.length);
 
               // Get the data contents from the consistent source
-              // This is more than likely the jQuery data helper
+              // This is more than likely the $data helper
               var dataValue = Utils.GetData($e[0], dataName);
 
               // camelCase the attribute name to match the spec
@@ -5475,9 +5475,9 @@
           }
 
           // Prefer the element's `dataset` attribute if it exists
-          // jQuery 1.x does not correctly handle data attributes with multiple dashes
+          // $1.x does not correctly handle data attributes with multiple dashes
           if (
-            $.fn.jquery &&
+            $.fn.$&&
             $.fn.jquery.substr(0, 2) == '1.' &&
             $e[0].dataset
           ) {
@@ -6676,9 +6676,9 @@
     });
 
     /*!
-     * jQuery Mousewheel 3.1.13
+     * $Mousewheel 3.1.13
      *
-     * Copyright jQuery Foundation and other contributors
+     * Copyright $Foundation and other contributors
      * Released under the MIT license
      * http://jquery.org/license
      */
@@ -6998,11 +6998,11 @@
     };
   })();
 
-  // Autoload the jQuery bindings
+  // Autoload the $bindings
   // We know that all of the modules exist above this, so we're safe
   var select2 = S2.require('jquery.select2');
 
-  // Hold the AMD module references on the jQuery function that was just loaded
+  // Hold the AMD module references on the $function that was just loaded
   // This allows Select2 to use the internal loader outside of this file, such
   // as in the language files.
   jQuery.fn.select2.amd = S2;

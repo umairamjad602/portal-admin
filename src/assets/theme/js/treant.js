@@ -876,7 +876,7 @@
             } // else this.CONFIG.scrollbar == 'None'
 
             return this;
-        },        
+        },
         /**
          * @param {TreeNode} treeNode
          * @param {boolean} hidePoint
@@ -1854,9 +1854,9 @@
                 if (key.startsWith("data-")) {
                     node.setAttribute(key, this.text[key]);
                 } else {
-                    
+
                     var textElement = document.createElement(this.text[key].href ? 'a' : 'p');
-                    
+
                     // make an <a> element if required
                     if (this.text[key].href) {
                         textElement.href = this.text[key].href;
@@ -1864,14 +1864,14 @@
                             textElement.target = this.text[key].target;
                         }
                     }
-                    
+
                     textElement.className =  "node-"+key;
                     textElement.appendChild(document.createTextNode(
                         this.text[key].val ? this.text[key].val :
                         this.text[key] instanceof Object ? "'val' param missing!" : this.text[key]
                     )
                     );
-                    
+
                     node.appendChild(textElement);
                 }
             }
@@ -2012,7 +2012,7 @@
         animateOnInitDelay: 500,
 
         padding: 15, // the difference is seen only when the scrollbar is shown
-        scrollbar: 'native', // "native" || "fancy" || "None" (PS: "fancy" requires jquery and perfect-scrollbar)
+        scrollbar: 'native', // "native" || "fancy" || "None" (PS: "fancy" requires $and perfect-scrollbar)
 
         connectors: {
             type: 'curve', // 'curve' || 'step' || 'straight' || 'bCurve'
@@ -2147,13 +2147,13 @@
     /**
      * Chart constructor.
      */
-    var Treant = function( jsonConfig, callback, jQuery ) {
+    var Treant = function( jsonConfig, callback, $) {
         if ( jsonConfig instanceof Array ) {
             jsonConfig = JSONconfig.make( jsonConfig );
         }
 
         // optional
-        if ( jQuery ) {
+        if ( $) {
             $ = jQuery;
         }
 

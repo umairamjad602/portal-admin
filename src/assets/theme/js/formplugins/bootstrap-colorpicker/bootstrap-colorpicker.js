@@ -123,7 +123,7 @@
           };
         })();
 
-        var _jquery = __webpack_require__(0);
+        var _$= __webpack_require__(0);
 
         var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -1541,7 +1541,7 @@
 
         var _Extension3 = _interopRequireDefault(_Extension2);
 
-        var _jquery = __webpack_require__(0);
+        var _$= __webpack_require__(0);
 
         var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -2902,7 +2902,7 @@
 
         var _Colorpicker2 = _interopRequireDefault(_Colorpicker);
 
-        var _jquery = __webpack_require__(0);
+        var _$= __webpack_require__(0);
 
         var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -2914,7 +2914,7 @@
 
         _jquery2.default[plugin] = _Colorpicker2.default;
 
-        // Colorpicker jQuery Plugin API
+        // Colorpicker $Plugin API
         _jquery2.default.fn[plugin] = function(option) {
           var fnArgs = Array.prototype.slice.call(arguments, 1),
             isSingleElement = this.length === 1,
@@ -3000,7 +3000,7 @@
 
         var _extensions2 = _interopRequireDefault(_extensions);
 
-        var _jquery = __webpack_require__(0);
+        var _$= __webpack_require__(0);
 
         var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -3691,7 +3691,7 @@
 
         var _Extension3 = _interopRequireDefault(_Extension2);
 
-        var _jquery = __webpack_require__(0);
+        var _$= __webpack_require__(0);
 
         var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -3996,7 +3996,7 @@
 
         var _Extension3 = _interopRequireDefault(_Extension2);
 
-        var _jquery = __webpack_require__(0);
+        var _$= __webpack_require__(0);
 
         var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -4195,7 +4195,7 @@
 
         var _Palette3 = _interopRequireDefault(_Palette2);
 
-        var _jquery = __webpack_require__(0);
+        var _$= __webpack_require__(0);
 
         var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -4390,7 +4390,7 @@
           };
         })();
 
-        var _jquery = __webpack_require__(0);
+        var _$= __webpack_require__(0);
 
         var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -4756,7 +4756,7 @@
           };
         })();
 
-        var _jquery = __webpack_require__(0);
+        var _$= __webpack_require__(0);
 
         var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -5347,7 +5347,7 @@
           };
         })();
 
-        var _jquery = __webpack_require__(0);
+        var _$= __webpack_require__(0);
 
         var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -6741,7 +6741,7 @@
           };
         })();
 
-        var _jquery = __webpack_require__(0);
+        var _$= __webpack_require__(0);
 
         var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -7080,7 +7080,7 @@
           };
         })();
 
-        var _jquery = __webpack_require__(0);
+        var _$= __webpack_require__(0);
 
         var _jquery2 = _interopRequireDefault(_jquery);
 

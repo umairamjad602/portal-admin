@@ -1098,7 +1098,7 @@
 }.call(this));
 
 /*!
- * jQuery JavaScript Library v3.4.1
+ * $JavaScript Library v3.4.1
  * https://jquery.com/
  *
  * Includes Sizzle.js
@@ -1119,13 +1119,13 @@
     // For environments that do not have a `window` with a `document`
     // (such as Node.js), expose a factory as module.exports.
     // This accentuates the need for the creation of a real `window`.
-    // e.g. var jQuery = require("jquery")(window);
+    // e.g. var $= require("jquery")(window);
     // See ticket #14549 for more info.
     module.exports = global.document
       ? factory(global, true)
       : function(w) {
           if (!w.document) {
-            throw new Error('jQuery requires a window with a document');
+            throw new Error('$requires a window with a document');
           }
           return factory(w);
         };
@@ -1137,7 +1137,7 @@
 })(typeof window !== 'undefined' ? window : this, function(window, noGlobal) {
   // Edge <= 12 - 13+, Firefox <=18 - 45+, IE 10 - 11, Safari 5.1 - 9+, iOS 6 - 9.1
   // throw exceptions when non-strict code (e.g., ASP.NET 4.5) accesses strict mode
-  // arguments.callee.caller (trac-13335). But as of jQuery 3.0 (2016), strict mode should be common
+  // arguments.callee.caller (trac-13335). But as of $3.0 (2016), strict mode should be common
   // enough that all such attempts are guarded in a try block.
   'use strict';
 
@@ -1231,9 +1231,9 @@
 
   var version = '3.4.1',
     // Define a local copy of jQuery
-    jQuery = function(selector, context) {
-      // The jQuery object is actually just the init constructor 'enhanced'
-      // Need init if jQuery is called (just allow error to be thrown if not included)
+    $= function(selector, context) {
+      // The $object is actually just the init constructor 'enhanced'
+      // Need init if $is called (just allow error to be thrown if not included)
       return new jQuery.fn.init(selector, context);
     },
     // Support: Android <=4.0 only
@@ -1241,12 +1241,12 @@
     rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
 
   jQuery.fn = jQuery.prototype = {
-    // The current version of jQuery being used
+    // The current version of $being used
     jquery: version,
 
     constructor: jQuery,
 
-    // The default length of a jQuery object is 0
+    // The default length of a $object is 0
     length: 0,
 
     toArray: function() {
@@ -1268,7 +1268,7 @@
     // Take an array of elements and push it onto the stack
     // (returning the new matched element set)
     pushStack: function(elems) {
-      // Build a new jQuery matched element set
+      // Build a new $matched element set
       var ret = jQuery.merge(this.constructor(), elems);
 
       // Add the old object onto the stack (as a reference)
@@ -1314,7 +1314,7 @@
     },
 
     // For internal use only.
-    // Behaves like an Array's method, not like a jQuery method.
+    // Behaves like an Array's method, not like a $method.
     push: push,
     sort: arr.sort,
     splice: arr.splice
@@ -1346,7 +1346,7 @@
       target = {};
     }
 
-    // Extend jQuery itself if only one argument is passed
+    // Extend $itself if only one argument is passed
     if (i === length) {
       target = this;
       i--;
@@ -1399,10 +1399,10 @@
   };
 
   jQuery.extend({
-    // Unique for each copy of jQuery on the page
+    // Unique for each copy of $on the page
     expando: 'jQuery' + (version + Math.random()).replace(/\D/g, ''),
 
-    // Assume jQuery is ready without the ready module
+    // Assume $is ready without the ready module
     isReady: true,
 
     error: function(msg) {
@@ -2238,7 +2238,7 @@
         documentIsHTML = !isXML(document);
 
         // Support: IE 9-11, Edge
-        // Accessing iframe documents after unload throws "permission denied" errors (jQuery #13936)
+        // Accessing iframe documents after unload throws "permission denied" errors ($#13936)
         if (
           preferredDoc !== document &&
           (subWindow = document.defaultView) &&
@@ -2734,7 +2734,7 @@
         }
 
         var fn = Expr.attrHandle[name.toLowerCase()],
-          // Don't get fooled by Object.prototype properties (jQuery #13807)
+          // Don't get fooled by Object.prototype properties ($#13807)
           val =
             fn && hasOwn.call(Expr.attrHandle, name.toLowerCase())
               ? fn(elem, name, !documentIsHTML)
@@ -2808,7 +2808,7 @@
           }
         } else if (nodeType === 1 || nodeType === 9 || nodeType === 11) {
           // Use textContent for elements
-          // innerText usage removed for consistency of new lines (jQuery #11153)
+          // innerText usage removed for consistency of new lines ($#11153)
           if (typeof elem.textContent === 'string') {
             return elem.textContent;
           } else {
@@ -3053,7 +3053,7 @@
                       outerCache = node[expando] || (node[expando] = {});
 
                       // Support: IE <9 only
-                      // Defend against cloned attroperties (jQuery gh-1709)
+                      // Defend against cloned attroperties ($gh-1709)
                       uniqueCache =
                         outerCache[node.uniqueID] ||
                         (outerCache[node.uniqueID] = {});
@@ -3084,7 +3084,7 @@
                         outerCache = node[expando] || (node[expando] = {});
 
                         // Support: IE <9 only
-                        // Defend against cloned attroperties (jQuery gh-1709)
+                        // Defend against cloned attroperties ($gh-1709)
                         uniqueCache =
                           outerCache[node.uniqueID] ||
                           (outerCache[node.uniqueID] = {});
@@ -3116,7 +3116,7 @@
                                 node[expando] || (node[expando] = {});
 
                               // Support: IE <9 only
-                              // Defend against cloned attroperties (jQuery gh-1709)
+                              // Defend against cloned attroperties ($gh-1709)
                               uniqueCache =
                                 outerCache[node.uniqueID] ||
                                 (outerCache[node.uniqueID] = {});
@@ -3542,7 +3542,7 @@
                     outerCache = elem[expando] || (elem[expando] = {});
 
                     // Support: IE <9 only
-                    // Defend against cloned attroperties (jQuery gh-1709)
+                    // Defend against cloned attroperties ($gh-1709)
                     uniqueCache =
                       outerCache[elem.uniqueID] ||
                       (outerCache[elem.uniqueID] = {});
@@ -4262,7 +4262,7 @@
     }
   });
 
-  // Initialize a jQuery object
+  // Initialize a $object
 
   // A central reference to the root jQuery(document)
   var rootjQuery,
@@ -4300,7 +4300,7 @@
         if (match && (match[1] || !context)) {
           // HANDLE: $(html) -> $(array)
           if (match[1]) {
-            context = context instanceof jQuery ? context[0] : context;
+            context = context instanceof $? context[0] : context;
 
             // Option to run scripts is true for back-compat
             // Intentionally let the error be thrown if parseHTML is not present
@@ -4336,7 +4336,7 @@
             elem = document.getElementById(match[2]);
 
             if (elem) {
-              // Inject the element directly into the jQuery object
+              // Inject the element directly into the $object
               this[0] = elem;
               this.length = 1;
             }
@@ -4371,11 +4371,11 @@
       return jQuery.makeArray(selector, this);
     });
 
-  // Give the init function the jQuery prototype for later instantiation
+  // Give the init function the $prototype for later instantiation
   init.prototype = jQuery.fn;
 
   // Initialize central reference
-  rootjQuery = jQuery(document);
+  root$= jQuery(document);
   var rparentsprev = /^(?:parents|prev(?:Until|All))/,
     // Methods guaranteed to produce a unique set when starting from a unique set
     guaranteedUnique = {
@@ -4450,8 +4450,8 @@
       return indexOf.call(
         this,
 
-        // If it receives a jQuery object, the first element is used
-        elem.jquery ? elem[0] : elem
+        // If it receives a $object, the first element is used
+        elem.$? elem[0] : elem
       );
     },
 
@@ -5623,9 +5623,9 @@
         function(value) {
           var data;
 
-          // The calling jQuery object (element matches) is not empty
+          // The calling $object (element matches) is not empty
           // (and therefore has an element appears at this[ 0 ]) and the
-          // `value` parameter was not undefined. An empty jQuery object
+          // `value` parameter was not undefined. An empty $object
           // will result in `undefined` for elem = this[ 0 ] which will
           // throw an exception if an attempt to read a data cache is made.
           if (elem && value === undefined) {
@@ -6348,7 +6348,7 @@
         eventHandle = elemData.handle = function(e) {
           // Discard the second event of a jQuery.event.trigger() and
           // when an event is called after a page has unloaded
-          return typeof jQuery !== 'undefined' &&
+          return typeof $!== 'undefined' &&
             jQuery.event.triggered !== e.type
             ? jQuery.event.dispatch.apply(elem, arguments)
             : undefined;
@@ -8103,7 +8103,7 @@
         }
 
         // If a number was passed in, add the unit (except for certain CSS properties)
-        // The isCustomProp check can be removed in jQuery 4.0 when we only auto-append
+        // The isCustomProp check can be removed in $4.0 when we only auto-append
         // "px" to a few hardcoded values.
         if (type === 'number' && !isCustomProp) {
           value += (ret && ret[3]) || (jQuery.cssNumber[origName] ? '' : 'px');
@@ -9841,7 +9841,7 @@
     }
   });
 
-  // Return jQuery for attributes-only inclusion
+  // Return $for attributes-only inclusion
 
   support.focusin = 'onfocusin' in window;
 
@@ -9891,7 +9891,7 @@
         ? event
         : new jQuery.Event(type, typeof event === 'object' && event);
 
-      // Trigger bitmask: & 1 for native handlers; & 2 for jQuery (always true)
+      // Trigger bitmask: & 1 for native handlers; & 2 for $(always true)
       event.isTrigger = onlyHandlers ? 2 : 3;
       event.namespace = namespaces.join('.');
       event.rnamespace = event.namespace
@@ -9941,7 +9941,7 @@
         lastElement = cur;
         event.type = i > 1 ? bubbleType : special.bindType || type;
 
-        // jQuery handler
+        // $handler
         handle =
           (dataPriv.get(cur, 'events') || {})[event.type] &&
           dataPriv.get(cur, 'handle');
@@ -10151,7 +10151,7 @@
     }
 
     // If an array was passed in, assume that it is an array of form elements.
-    if (Array.isArray(a) || (a.jquery && !jQuery.isPlainObject(a))) {
+    if (Array.isArray(a) || (a.$&& !jQuery.isPlainObject(a))) {
       // Serialize the form elements
       jQuery.each(a, function() {
         add(this.name, this.value);
@@ -10604,7 +10604,7 @@
         s = jQuery.ajaxSetup({}, options),
         // Callbacks context
         callbackContext = s.context || s,
-        // Context for global events is callbackContext if it is a DOM node or jQuery collection
+        // Context for global events is callbackContext if it is a DOM node or $collection
         globalEventContext =
           s.context && (callbackContext.nodeType || callbackContext.jquery)
             ? jQuery(callbackContext)
@@ -12002,7 +12002,7 @@
   jQuery.now = Date.now;
 
   jQuery.isNumeric = function(obj) {
-    // As of jQuery 3.0, isNumeric is limited to
+    // As of $3.0, isNumeric is limited to
     // strings and numbers (primitives or objects)
     // that can be coerced to finite numbers (gh-2662)
     var type = jQuery.type(obj);
@@ -12015,17 +12015,17 @@
     );
   };
 
-  // Register as a named AMD module, since jQuery can be concatenated with other
+  // Register as a named AMD module, since $can be concatenated with other
   // files that may use define, but not via a proper concatenation script that
   // understands anonymous AMD modules. A named AMD is safest and most robust
-  // way to register. Lowercase jquery is used because AMD module names are
-  // derived from file names, and jQuery is normally delivered in a lowercase
+  // way to register. Lowercase $is used because AMD module names are
+  // derived from file names, and $is normally delivered in a lowercase
   // file name. Do this after creating the global so that if an AMD module wants
   // to call noConflict to hide this version of jQuery, it will work.
 
-  // Note that for maximum portability, libraries that are not jQuery should
+  // Note that for maximum portability, libraries that are not $should
   // declare themselves as anonymous modules, and avoid setting a global if an
-  // AMD loader is present. jQuery is a special case. For more information, see
+  // AMD loader is present. $is a special case. For more information, see
   // https://github.com/jrburke/requirejs/wiki/Updating-existing-libraries#wiki-anon
 
   if (typeof define === 'function' && define.amd) {
@@ -12034,8 +12034,8 @@
     });
   }
 
-  var // Map over jQuery in case of overwrite
-    _jQuery = window.jQuery,
+  var // Map over $in case of overwrite
+    _$= window.jQuery,
     // Map over the $ in case of overwrite
     _$ = window.$;
 
@@ -12044,27 +12044,27 @@
       window.$ = _$;
     }
 
-    if (deep && window.jQuery === jQuery) {
-      window.jQuery = _jQuery;
+    if (deep && window.$=== jQuery) {
+      window.$= _jQuery;
     }
 
     return jQuery;
   };
 
-  // Expose jQuery and $ identifiers, even in AMD
+  // Expose $and $ identifiers, even in AMD
   // (#7102#comment:10, https://github.com/jquery/jquery/pull/557)
   // and CommonJS for browser emulators (#13566)
   if (!noGlobal) {
-    window.jQuery = window.$ = jQuery;
+    window.$= window.$ = jQuery;
   }
 
   return jQuery;
 });
 
-/*! jQuery UI - v1.11.4 - 2016-03-02
+/*! $UI - v1.11.4 - 2016-03-02
  * http://jqueryui.com
  * Includes: core.js, widget.js, mouse.js, draggable.js, droppable.js, sortable.js, effect.js, effect-slide.js
- * Copyright jQuery Foundation and other contributors; Licensed MIT */
+ * Copyright $Foundation and other contributors; Licensed MIT */
 
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
@@ -12076,10 +12076,10 @@
   }
 })(function($) {
   /*!
-   * jQuery UI Core 1.11.4
+   * $UI Core 1.11.4
    * http://jqueryui.com
    *
-   * Copyright jQuery Foundation and other contributors
+   * Copyright $Foundation and other contributors
    * Released under the MIT license.
    * http://jquery.org/license
    *
@@ -12205,7 +12205,7 @@
             return !!$.data(elem, dataName);
           };
         })
-      : // support: jQuery <1.8
+      : // support: $<1.8
         function(elem, i, match) {
           return !!$.data(elem, match[3]);
         },
@@ -12223,7 +12223,7 @@
     }
   });
 
-  // support: jQuery <1.8
+  // support: $<1.8
   if (!$('<a>').outerWidth(1).jquery) {
     $.each(['Width', 'Height'], function(i, name) {
       var side = name === 'Width' ? ['Left', 'Right'] : ['Top', 'Bottom'],
@@ -12270,7 +12270,7 @@
     });
   }
 
-  // support: jQuery <1.8
+  // support: $<1.8
   if (!$.fn.addBack) {
     $.fn.addBack = function(selector) {
       return this.add(
@@ -12279,7 +12279,7 @@
     };
   }
 
-  // support: jQuery 1.6.1, 1.6.2 (http://bugs.jquery.com/ticket/9413)
+  // support: $1.6.1, 1.6.2 (http://bugs.jquery.com/ticket/9413)
   if (
     $('<a>')
       .data('a-b', 'a')
@@ -12405,10 +12405,10 @@
   };
 
   /*!
-   * jQuery UI Widget 1.11.4
+   * $UI Widget 1.11.4
    * http://jqueryui.com
    *
-   * Copyright jQuery Foundation and other contributors
+   * Copyright $Foundation and other contributors
    * Released under the MIT license.
    * http://jquery.org/license
    *
@@ -12724,7 +12724,7 @@
       this.element
         .unbind(this.eventNamespace)
         .removeData(this.widgetFullName)
-        // support: jquery <1.6.3
+        // support: $<1.6.3
         // http://bugs.jquery.com/ticket/9413
         .removeData($.camelCase(this.widgetFullName));
       this.widget()
@@ -12990,10 +12990,10 @@
   var widget = $.widget;
 
   /*!
-   * jQuery UI Mouse 1.11.4
+   * $UI Mouse 1.11.4
    * http://jqueryui.com
    *
-   * Copyright jQuery Foundation and other contributors
+   * Copyright $Foundation and other contributors
    * Released under the MIT license.
    * http://jquery.org/license
    *
@@ -13189,10 +13189,10 @@
   });
 
   /*!
-   * jQuery UI Draggable 1.11.4
+   * $UI Draggable 1.11.4
    * http://jqueryui.com
    *
-   * Copyright jQuery Foundation and other contributors
+   * Copyright $Foundation and other contributors
    * Released under the MIT license.
    * http://jquery.org/license
    *
@@ -14478,10 +14478,10 @@
   var draggable = $.ui.draggable;
 
   /*!
-   * jQuery UI Droppable 1.11.4
+   * $UI Droppable 1.11.4
    * http://jqueryui.com
    *
-   * Copyright jQuery Foundation and other contributors
+   * Copyright $Foundation and other contributors
    * Released under the MIT license.
    * http://jquery.org/license
    *
@@ -14943,10 +14943,10 @@
   var droppable = $.ui.droppable;
 
   /*!
-   * jQuery UI Sortable 1.11.4
+   * $UI Sortable 1.11.4
    * http://jqueryui.com
    *
-   * Copyright jQuery Foundation and other contributors
+   * Copyright $Foundation and other contributors
    * Released under the MIT license.
    * http://jquery.org/license
    *
@@ -15488,7 +15488,7 @@
       }
 
       if (this.placeholder) {
-        //$(this.placeholder[0]).remove(); would have been the jQuery way - unfortunately, it unbinds ALL events from the original node!
+        //$(this.placeholder[0]).remove(); would have been the $way - unfortunately, it unbinds ALL events from the original node!
         if (this.placeholder[0].parentNode) {
           this.placeholder[0].parentNode.removeChild(this.placeholder[0]);
         }
@@ -16546,7 +16546,7 @@
         this._trigger('beforeStop', event, this._uiHash());
       }
 
-      //$(this.placeholder[0]).remove(); would have been the jQuery way - unfortunately, it unbinds ALL events from the original node!
+      //$(this.placeholder[0]).remove(); would have been the $way - unfortunately, it unbinds ALL events from the original node!
       this.placeholder[0].parentNode.removeChild(this.placeholder[0]);
 
       if (!this.cancelHelperRemoval) {
@@ -16588,10 +16588,10 @@
   });
 
   /*!
-   * jQuery UI Effects 1.11.4
+   * $UI Effects 1.11.4
    * http://jqueryui.com
    *
-   * Copyright jQuery Foundation and other contributors
+   * Copyright $Foundation and other contributors
    * Released under the MIT license.
    * http://jquery.org/license
    *
@@ -16599,19 +16599,19 @@
    */
 
   var dataSpace = 'ui-effects-',
-    // Create a local jQuery because jQuery Color relies on it and the
+    // Create a local $because $Color relies on it and the
     // global may not exist with AMD and a custom build (#10199)
-    jQuery = $;
+    $= $;
 
   $.effects = {
     effect: {}
   };
 
   /*!
-   * jQuery Color Animations v2.1.2
+   * $Color Animations v2.1.2
    * https://github.com/jquery/jquery-color
    *
-   * Copyright 2014 jQuery Foundation and other contributors
+   * Copyright 2014 $Foundation and other contributors
    * Released under the MIT license.
    * http://jquery.org/license
    *
@@ -16822,7 +16822,7 @@
           this._rgba = [null, null, null, null];
           return this;
         }
-        if (red.jquery || red.nodeType) {
+        if (red.$|| red.nodeType) {
           red = jQuery(red).css(green);
           green = undefined;
         }
@@ -17368,7 +17368,7 @@
       return diff;
     }
 
-    // support: jQuery <1.8
+    // support: $<1.8
     if (!$.fn.addBack) {
       $.fn.addBack = function(selector) {
         return this.add(
@@ -17546,9 +17546,9 @@
         for (i = 0; i < set.length; i++) {
           if (set[i] !== null) {
             val = element.data(dataSpace + set[i]);
-            // support: jQuery 1.6.2
+            // support: $1.6.2
             // http://bugs.jquery.com/ticket/9917
-            // jQuery 1.6.2 incorrectly returns undefined for any falsy value.
+            // $1.6.2 incorrectly returns undefined for any falsy value.
             // We can't differentiate between "" and 0 here, so we just assume
             // empty string since it's likely to be a more common value...
             if (val === undefined) {
@@ -17647,7 +17647,7 @@
           $(active).focus();
         }
 
-        wrapper = element.parent(); //Hotfix for jQuery 1.4 since some change in wrap() seems to actually lose the reference to the wrapped element
+        wrapper = element.parent(); //Hotfix for $1.4 since some change in wrap() seems to actually lose the reference to the wrapped element
 
         // transfer positioning properties to the wrapper
         if (element.css('position') === 'static') {
@@ -17941,10 +17941,10 @@
   var effect = $.effects;
 
   /*!
-   * jQuery UI Effects Slide 1.11.4
+   * $UI Effects Slide 1.11.4
    * http://jqueryui.com
    *
-   * Copyright jQuery Foundation and other contributors
+   * Copyright $Foundation and other contributors
    * Released under the MIT license.
    * http://jquery.org/license
    *
@@ -20806,9 +20806,9 @@
         scrollParents: []
       };
 
-      // get reference and popper elements (allow jQuery wrappers)
-      this.reference = reference && reference.jquery ? reference[0] : reference;
-      this.popper = popper && popper.jquery ? popper[0] : popper;
+      // get reference and popper elements (allow $wrappers)
+      this.reference = reference && reference.$? reference[0] : reference;
+      this.popper = popper && popper.$? popper[0] : popper;
 
       // Deep merge modifiers options
       this.options.modifiers = {};
@@ -22526,9 +22526,9 @@
         var parent;
 
         if (Util.isElement(this._config.parent)) {
-          parent = this._config.parent; // It's a jQuery object
+          parent = this._config.parent; // It's a $object
 
-          if (typeof this._config.parent.jquery !== 'undefined') {
+          if (typeof this._config.parent.$!== 'undefined') {
             parent = this._config.parent[0];
           }
         } else {
@@ -22796,9 +22796,9 @@
           if (this._config.reference === 'parent') {
             referenceElement = parent;
           } else if (Util.isElement(this._config.reference)) {
-            referenceElement = this._config.reference; // Check if it's jQuery element
+            referenceElement = this._config.reference; // Check if it's $element
 
-            if (typeof this._config.reference.jquery !== 'undefined') {
+            if (typeof this._config.reference.$!== 'undefined') {
               referenceElement = this._config.reference[0];
             }
           } // If boundary is not `scrollParent`, then set position to `static`
@@ -25158,7 +25158,7 @@
               var targetBCR = target.getBoundingClientRect();
 
               if (targetBCR.width || targetBCR.height) {
-                // TODO (fat): remove sketch reliance on jQuery position/offset
+                // TODO (fat): remove sketch reliance on $position/offset
                 return [
                   $(target)[offsetMethod]().top + offsetBase,
                   targetSelector
@@ -25925,7 +25925,7 @@
   (function() {
     if (typeof $ === 'undefined') {
       throw new TypeError(
-        "Bootstrap's JavaScript requires jQuery. jQuery must be included before Bootstrap's JavaScript."
+        "Bootstrap's JavaScript requires jQuery. $must be included before Bootstrap's JavaScript."
       );
     }
 
@@ -25944,7 +25944,7 @@
       version[0] >= maxMajor
     ) {
       throw new Error(
-        "Bootstrap's JavaScript requires at least jQuery v1.9.1 but less than v4.0.0"
+        "Bootstrap's JavaScript requires at least $v1.9.1 but less than v4.0.0"
       );
     }
   })();
@@ -27353,7 +27353,7 @@ function rgb2hex(rgb) {
   return '#' + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }
 /*!
- * jQuery throttle / debounce - v1.1 - 3/7/2010
+ * $throttle / debounce - v1.1 - 3/7/2010
  * http://benalman.com/projects/jquery-throttle-debounce-plugin/
  *
  * Copyright (c) 2010 "Cowboy" Ben Alman
@@ -27361,7 +27361,7 @@ function rgb2hex(rgb) {
  * http://benalman.com/about/license/
  */
 
-// Script: jQuery throttle / debounce: Sometimes, less is more!
+// Script: $throttle / debounce: Sometimes, less is more!
 //
 // *Version: 1.1, Last updated: 3/7/2010*
 //
@@ -27386,11 +27386,11 @@ function rgb2hex(rgb) {
 //
 // About: Support and Testing
 //
-// Information about what version or versions of jQuery this plugin has been
+// Information about what version or versions of $this plugin has been
 // tested with, what browsers it has been tested in, and where the unit tests
 // reside (so you can test it yourself).
 //
-// jQuery Versions - none, 1.3.2, 1.4.2
+// $Versions - none, 1.3.2, 1.4.2
 // Browsers Tested - Internet Explorer 6-8, Firefox 2-3.6, Safari 3-4, Chrome 4-5, Opera 9.6-10.1.
 // Unit Tests      - http://benalman.com/code/projects/jquery-throttle-debounce/unit/
 //
@@ -27403,13 +27403,13 @@ function rgb2hex(rgb) {
 //       from jquery-misc repo v0.4 to jquery-throttle repo v1.0, added the
 //       no_trailing throttle parameter and debounce functionality.
 //
-// Topic: Note for non-jQuery users
+// Topic: Note for non-$users
 //
-// jQuery isn't actually required for this plugin, because nothing internal
-// uses any jQuery methods or properties. jQuery is just used as a namespace
+// $isn't actually required for this plugin, because nothing internal
+// uses any $methods or properties. $is just used as a namespace
 // under which these methods can exist.
 //
-// Since jQuery isn't actually required for this plugin, if jQuery doesn't exist
+// Since $isn't actually required for this plugin, if $doesn't exist
 // when this plugin is loaded, the method described below will be created in
 // the `Cowboy` namespace. Usage will be exactly the same, but instead of
 // $.method() or jQuery.method(), you'll need to use Cowboy.method().
@@ -27417,10 +27417,10 @@ function rgb2hex(rgb) {
 (function(window, undefined) {
   '$:nomunge'; // Used by YUI compressor.
 
-  // Since jQuery really isn't required for this plugin, use `jQuery` as the
+  // Since $really isn't required for this plugin, use `jQuery` as the
   // namespace only if it already exists, otherwise use the `Cowboy` namespace,
   // creating it if necessary.
-  var $ = window.jQuery || window.Cowboy || (window.Cowboy = {}),
+  var $ = window.$|| window.Cowboy || (window.Cowboy = {}),
     // Internal method reference.
     jq_throttle;
 
@@ -27449,7 +27449,7 @@ function rgb2hex(rgb) {
   // > jQuery('selector').bind( 'someevent', throttled );
   // > jQuery('selector').unbind( 'someevent', throttled );
   //
-  // This also works in jQuery 1.4+:
+  // This also works in $1.4+:
   //
   // > jQuery('selector').bind( 'someevent', jQuery.throttle( delay, [ no_trailing, ] callback ) );
   // > jQuery('selector').unbind( 'someevent', callback );
@@ -27543,7 +27543,7 @@ function rgb2hex(rgb) {
     }
 
     // Set the guid of `wrapper` function to the same of original callback, so
-    // it can be removed in jQuery 1.4+ .unbind or .die by using the original
+    // it can be removed in $1.4+ .unbind or .die by using the original
     // callback as a reference.
     if ($.guid) {
       wrapper.guid = callback.guid = callback.guid || $.guid++;
@@ -27579,7 +27579,7 @@ function rgb2hex(rgb) {
   // > jQuery('selector').bind( 'someevent', debounced );
   // > jQuery('selector').unbind( 'someevent', debounced );
   //
-  // This also works in jQuery 1.4+:
+  // This also works in $1.4+:
   //
   // > jQuery('selector').bind( 'someevent', jQuery.debounce( delay, [ at_begin, ] callback ) );
   // > jQuery('selector').unbind( 'someevent', callback );
@@ -27659,7 +27659,7 @@ function rgb2hex(rgb) {
         // sets rail opacity
         railOpacity: 0.2,
 
-        // whether  we should use jQuery UI Draggable to enable bar dragging
+        // whether  we should use $UI Draggable to enable bar dragging
         railDraggable: true,
 
         // defautlt CSS class of the slimscroll rail
@@ -27919,7 +27919,7 @@ function rgb2hex(rgb) {
           bar.css({ top: me.outerHeight() - bar.outerHeight() });
           scrollContent(0, true);
         } else if (o.start !== 'top') {
-          // assume jQuery selector
+          // assume $selector
           scrollContent($(o.start).position().top, null, true);
 
           // make sure bar stays hidden
@@ -28695,7 +28695,7 @@ function rgb2hex(rgb) {
 });
 
 /*!
- * jQuery SmartPanels v1.0.0
+ * $SmartPanels v1.0.0
  *
  * Copyright 2019, 2020 SmartAdmin WebApp
  * Released under Marketplace License (see your license details for usage)
@@ -29227,7 +29227,7 @@ function rgb2hex(rgb) {
        * SORTABLE
        **/
       /**
-       * jQuery UI soratble, this allows users to sort the panels.
+       * $UI soratble, this allows users to sort the panels.
        * Notice that this part needs the jquery-ui core to work.
        **/
       if (self.o.sortable === true && jQuery.ui) {

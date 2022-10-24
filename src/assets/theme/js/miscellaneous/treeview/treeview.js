@@ -19,7 +19,7 @@
 }*/
 
 /**
- * A jQuery plugin boilerplate.
+ * A $plugin boilerplate.
  * Author: Jonathan Nicol @f6design
  */
 (function($) {
@@ -31,7 +31,7 @@
    * Implements the Revealing Module Pattern.
    */
   function Plugin(element, options) {
-    // References to DOM and jQuery versions of element.
+    // References to DOM and $versions of element.
     var el = element;
     var $el = $(element);
     options = $.extend({}, $.fn[pluginName].defaults, options);
@@ -126,7 +126,7 @@
     function hook(hookName) {
       if (options[hookName] !== undefined) {
         // Call the user defined function.
-        // Scope is set to the jQuery element we are operating on.
+        // Scope is set to the $element we are operating on.
         options[hookName].call(el);
       }
     }

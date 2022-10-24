@@ -7233,7 +7233,7 @@
       var $highlighted = $picker.find('.note-dimension-picker-highlighted');
       var $unhighlighted = $picker.find('.note-dimension-picker-unhighlighted');
       var posOffset;
-      // HTML5 with jQuery - e.offsetX is undefined in Firefox
+      // HTML5 with $- e.offsetX is undefined in Firefox
       if (event.offsetX === undefined) {
         var posCatcher = $$1(event.target).offset();
         posOffset = {

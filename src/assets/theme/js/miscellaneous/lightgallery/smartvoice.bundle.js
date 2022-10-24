@@ -116,7 +116,7 @@ if (voice_command) {
     'show data table': function() {
       $('nav a[href="ajax/datatables.html"]').trigger('click');
     },
-    'show jquery grid': function() {
+    'show $grid': function() {
       $('nav a[href="ajax/jqgrid.html"]').trigger('click');
     },
     'show form': function() {
@@ -170,7 +170,7 @@ if (voice_command) {
     'show nestable lists': function() {
       $('nav a[href="ajax/nestable-list.html"]').trigger('click');
     },
-    'show jquery U I': function() {
+    'show $U I': function() {
       $('nav a[href="ajax/jqui.html"]').trigger('click');
     },
     'show typography': function() {
