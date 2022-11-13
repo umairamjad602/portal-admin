@@ -1,8 +1,15 @@
-.list-group-item.active{
-  background-color: #0b176f;
-  color: white;
+.dropdown-menu-arrow:before {
+  left: 20px !important;
+  z-index: -1;
 }
-.list-group-item:hover {
-  background-color: #e25d34;
-  color: white;
+.quick-link {
+  color: var(--transparent-body);
+  h4 {
+    padding: 5px 20px;
+
+    :hover {
+      background: #6c5ffc82;
+      color: white;
+    }
+  }
 }

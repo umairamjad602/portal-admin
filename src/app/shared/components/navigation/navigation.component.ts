@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DynamicScriptLoaderService } from '@app/shared/services/dynamic-script-loader.service';
+import { NAVIGATION } from '@app/shared/models/navigation';
+declare const $:any;
 
 @Component({
   selector: 'app-navigation',
@@ -8,17 +9,13 @@ import { DynamicScriptLoaderService } from '@app/shared/services/dynamic-script-
 })
 export class NavigationComponent implements OnInit {
   public ready = false;
+  public navigation = NAVIGATION;
 
   constructor(
-    private dynamicScriptLoaderService: DynamicScriptLoaderService
   ) { }
 
   ngOnInit(): void {
-    this.dynamicScriptLoaderService.load(['scrollbar', 'scrollable']).then(
-      () => {
-        this.ready = true;
-      }
-    )
+    this.ready = true;
   }
 
 }

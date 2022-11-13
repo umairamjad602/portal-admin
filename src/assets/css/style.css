@@ -198,6 +198,9 @@ License        :   Licensed under ThemeForest License
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+body {
+    scroll-behavior: smooth;
+}
 
 * {
     box-sizing: border-box;
@@ -15625,7 +15628,6 @@ ul.inbox-pagination li {
     background-size: cover;
     background-position: center;
     z-index: 0;
-    background: url(../images/pngs/bg.png);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -18742,7 +18744,6 @@ img {
 }
 
 .landing-top-header {
-    background-image: url(../images/landing/bg4.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -18764,7 +18765,6 @@ img {
     width: 35%;
     height: 80%;
     overflow: hidden;
-    background-image: url(../images/landing/bg.png);
 }
 
 .landing-top-header .top {
@@ -19118,7 +19118,6 @@ img {
 }
 
 .landing-page .bg-image-landing {
-    background-image: url(../images/landing/bg4.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -19138,7 +19137,6 @@ img {
     right: 0;
     width: 35%;
     height: 80%;
-    background-image: url(../images/landing/bg.png);
 }
 
 .landing-page .landing-statistics .card-body {
@@ -19991,7 +19989,6 @@ img {
 }
 
 .bg-image-style {
-    background-image: url(../images/landing/bg3.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -20144,11 +20141,9 @@ img {
 }
 
 .dark-mode.landing-page .landing-top-header {
-    background-image: url(../images/landing/bg4-dark.png);
 }
 
 .dark-mode.landing-page .landing-top-header::before {
-    background-image: url(../images/landing/bg-dark.png);
 }
 
 .dark-mode.landing-page .logo-2 {
@@ -20210,15 +20205,12 @@ img {
 }
 
 .dark-mode.landing-page .bg-image-landing {
-    background-image: url(../images/landing/bg4-dark.png);
 }
 
 .dark-mode.landing-page .bg-image-landing::before {
-    background-image: url(../images/landing/bg-dark.png);
 }
 
 .dark-mode.landing-page .bg-image-style {
-    background-image: url(../images/landing/bg3-dark.png);
 }
 
 .dark-mode.landing-page .card .card {
@@ -37611,7 +37603,6 @@ li.folder-group {
 }
 
 .folder {
-    background: url("../plugins/dtree/images/misc.png") 0px -39px no-repeat;
     padding-left: 20px;
     height: 18px;
     display: inline-block;
@@ -37619,7 +37610,6 @@ li.folder-group {
 }
 
 .folder-open {
-    background: url("../plugins/dtree/images/misc.png") -21px -39px no-repeat;
     padding-left: 20px;
     height: 18px;
     display: inline-block;
@@ -37627,14 +37617,12 @@ li.folder-group {
 }
 
 .main {
-    background: url("../plugins/dtree/images/misc.png") 2px 0 no-repeat;
     width: 18px;
     height: 18px;
     display: inline-block;
 }
 
 .folder-group {
-    background: url("../plugins/dtree/images/misc.png") -46px -2px repeat-y;
 }
 
 .folder-group.last {
@@ -37642,42 +37630,36 @@ li.folder-group {
 }
 
 .plus {
-    background: url("../plugins/dtree/images/misc.png") 0px -59px no-repeat;
     padding-left: 20px;
     display: inline-block;
     height: 18px;
 }
 
 .last .plus {
-    background: url("../plugins/dtree/images/misc.png") 0px -82px no-repeat;
     padding-left: 20px;
     display: inline-block;
     height: 18px;
 }
 
 .folder-group.last .minus {
-    background: url("../plugins/dtree/images/misc.png") -18px -82px no-repeat;
     padding-left: 20px;
     display: inline-block;
     height: 18px;
 }
 
 .minus {
-    background: url("../plugins/dtree/images/misc.png") -18px -59px no-repeat;
     padding-left: 20px;
     display: inline-block;
     height: 18px;
 }
 
 .join {
-    background: url("../plugins/dtree/images/misc.png") 0 -20px no-repeat;
     width: 18px;
     height: 18px;
     display: inline-block;
 }
 
 .join-last .join {
-    background: url("../plugins/dtree/images/misc.png") -18px -20px no-repeat;
     width: 18px;
     height: 18px;
     display: inline-block;
@@ -37702,7 +37684,6 @@ li.folder-group {
 }
 
 .dTree .page-tree {
-    background: url("../plugins/dtree/images/misc.png") no-repeat;
     width: 25px;
     height: 18px;
     display: inline-block;
@@ -39256,7 +39237,6 @@ div.DTE div.DTE_Processing_Indicator:after {
     border-radius: 5px;
     padding: 0;
     background-color: #f6f6fb;
-    background-image: url("../plugins/fancyuploder/fancy_upload.png");
     background-repeat: no-repeat;
     background-position: center center;
     opacity: 0.85;
@@ -39312,11 +39292,9 @@ div.DTE div.DTE_Processing_Indicator:after {
 }
 
 .ff_fileupload_wrap .ff_fileupload_recordaudio {
-    background-image: url("../plugins/fancyuploder/fancy_microphone.png");
 }
 
 .ff_fileupload_wrap .ff_fileupload_recordvideo {
-    background-image: url("../plugins/fancyuploder/fancy_webcam.png");
 }
 
 .ff_fileupload_wrap .ff_fileupload_recordvideo_preview {
@@ -39475,14 +39453,6 @@ div.DTE div.DTE_Processing_Indicator:after {
     opacity: 1;
     background-color: #fdfdfd;
     border-color: #4e4c73;
-}
-
-.ff_fileupload_wrap table.ff_fileupload_uploads button.ff_fileupload_start_upload {
-    background-image: url("../plugins/fancyuploder/fancy_okay.png");
-}
-
-.ff_fileupload_wrap table.ff_fileupload_uploads button.ff_fileupload_remove_file {
-    background-image: url("../plugins/fancyuploder/fancy_remove.png");
 }
 
 .ff_fileupload_wrap table.ff_fileupload_uploads td.ff_fileupload_preview .ff_fileupload_preview_text_with_color {
@@ -44715,10 +44685,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .iti__flag {
     width: 20px;
     height: 15px;
-    background-image: url("../plugins/intl-tel-input-master/img/flags.png");
-    background-repeat: no-repeat;
-    background-color: #f4f5fb;
-    background-position: 20px 0;
 }
 
 .iti__flag.iti__be {
@@ -46046,12 +46012,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-    .iti__flag {
-        background-image: url("../plugins/intl-tel-input-master/img/flags@2x.png");
-    }
-}
 
 .iti input {
     outline: 0;
@@ -46246,14 +46206,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 // ===================================================================================================================*/
 /* =====================================================================================================================
 // Skin details */
-.irs-line-mid,
-.irs-line-left,
-.irs-line-right,
-.irs-bar,
-.irs-bar-edge,
-.irs-slider {
-    background: url(../plugins/ion.rangeSlider/img/sprite-skin-simple.png) repeat-x;
-}
 
 .irs {
     height: 40px;
@@ -46380,9 +46332,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .irs-line-right,
 .irs-bar,
 .irs-bar-edge,
-.irs-slider {
-    background: url(../plugins/ion.rangeSlider/img/sprite-skin-simple.png) repeat-x;
-}
 
 .irs {
     height: 40px;
@@ -50055,17 +50004,6 @@ body .ui-tooltip {
     border-radius: 5px;
 }
 
-.leaflet-control-layers-toggle {
-    background-image: url(../plugins/leaflet/images/layers.png);
-    width: 36px;
-    height: 36px;
-}
-
-.leaflet-retina .leaflet-control-layers-toggle {
-    background-image: url(../plugins/leaflet/images/layers-2x.png);
-    background-size: 26px 26px;
-}
-
 .leaflet-touch .leaflet-control-layers-toggle {
     width: 44px;
     height: 44px;
@@ -50110,11 +50048,6 @@ body .ui-tooltip {
     height: 0;
     border-top: 1px solid #ddd;
     margin: 5px -10px 5px -6px;
-}
-
-/* Default icon URLs */
-.leaflet-default-icon-path {
-    background-image: url(../plugins/leaflet/images/marker-icon.png);
 }
 
 /* attribution and scale controls */
@@ -51001,11 +50934,6 @@ body .ui-tooltip {
     right: 7px;
     width: 20px;
     height: 25px;
-    background: url("../plugins/multipleselect/multiple-select.png") left top no-repeat;
-}
-
-.ms-choice>div.open {
-    background: url("../plugins/multipleselect/multiple-select.png") right top no-repeat;
 }
 
 .ms-drop {

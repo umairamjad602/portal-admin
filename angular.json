@@ -29,24 +29,18 @@
             "styles": [
               "src/assets/plugins/bootstrap/css/bootstrap.min.css",
               "src/assets/css/style.css",
-              "src/assets/css/dark-style.css",
               "src/assets/css/transparent-style.css",
               "src/assets/css/skin-modes.css",
               "src/assets/css/icons.css",
-              "src/assets/colors/color1.css",
-              "src/assets/css/vendors/scrollbar.css"
+              "src/assets/colors/color1.css"
             ],
             "scripts": [
+              "src/assets/js/jquery.min.js",
               "src/assets/plugins/bootstrap/js/popper.min.js",
               "src/assets/plugins/bootstrap/js/bootstrap.min.js",
               "src/assets/js/sticky.js",
               "src/assets/plugins/sidemenu/sidemenu.js",
-              "src/assets/plugins/bootstrap5-typehead/autocomplete.js",
-              "src/assets/js/typehead.js",
-              "src/assets/js/index1.js",
-              "src/assets/js/themeColors.js",
-              "src/assets/js/custom.js",
-              "src/assets/plugins/sidebar/sidebar.js"
+              "src/assets/js/custom.js"
             ]
           },
           "configurations": {
